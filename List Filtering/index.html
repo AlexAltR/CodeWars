@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function filter_list(list) {
+            // console.log(list);
+            newList = [];
+            for (let i = 0; i < list.length; i++) {
+                const elementList = list[i];
+                // console.log(elementList);
+                // console.log(typeof(elementList));
+                if (typeof(elementList) !== 'string' ){
+                    // console.log(elementList);
+                    // console.log(typeof(elementList));
+                    newList.push(elementList);
+                }
+            }
+            return newList;
+        }
+
+        console.log(filter_list([1,2,'a','b']));
+    </script>
+</body>
+</html>
