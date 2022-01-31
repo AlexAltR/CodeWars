@@ -10,19 +10,14 @@
     
     <script>
         function filter_list(list) {
-            // console.log(list);
-            newList = [];
-            for (let i = 0; i < list.length; i++) {
-                const elementList = list[i];
-                // console.log(elementList);
-                // console.log(typeof(elementList));
-                if (typeof(elementList) !== 'string' ){
-                    // console.log(elementList);
-                    // console.log(typeof(elementList));
-                    newList.push(elementList);
+            newList = []; // Create new array
+            for (let i = 0; i < list.length; i++) { // Create loop for array 'list'
+                const elementList = list[i]; // insert one element from array 'list'
+                if (typeof(elementList) === 'number' ){ // condition on number
+                    newList.push(elementList); // if don`t string, element write in newArray
                 }
             }
-            return newList;
+            return newList; // return newArray
         }
 
         console.log(filter_list([1,2,'a','b']));
