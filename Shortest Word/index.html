@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findShort(s){
+            wordsArr = s.split(' ');
+            wordsArrLength = [];
+            for (let i = 0; i < wordsArr.length; i++) {
+                const elArrWords = wordsArr[i];
+                wordsArrLength.push(elArrWords.length);
+            }
+            return Math.min.apply(null,wordsArrLength)
+        }
+
+        console.log(findShort("Let's travel abroad shall we"))
+    </script>
+</body>
+</html>

@@ -8,16 +8,16 @@
 </head>
 <body>
     <script>
-        function accum(s) {
-            let newString=""; // create new string
-            for (let i = 0; i < s.length; i++) { // loop for array 's'
-                const element = s[i]; // get element
-                // in new string add element upper case plus element copy n once in lower case and plus sumbol '-'
-                newString += element.toUpperCase() + element.repeat(i).toLowerCase().concat('-'); 
-            }
-            // delete last symbol from new string and return
-            return newString.slice(0, -1); 
-        }
+        // function accum(s) {
+        //     let newString=""; // create new string
+        //     for (let i = 0; i < s.length; i++) { // loop for array 's'
+        //         const element = s[i]; // get element
+        //         // in new string add element upper case plus element copy n once in lower case and plus sumbol '-'
+        //         newString += element.toUpperCase() + element.repeat(i).toLowerCase().concat('-'); 
+        //     }
+        //     // delete last symbol from new string and return
+        //     return newString.slice(0, -1); 
+        // }
 
         // example function
         function accum(s) {
