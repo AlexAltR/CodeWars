@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeIrD StRiNg CaSe</title>
+</head>
+<body>
+    
+    <script>
+        function toWeirdCase(string){
+            let strArr = string.split(' ') // Разбиваем строку на массив по пробелу
+            let newString = ''; // Инициализируем переменную для строки-результата
+            for (let i = 0; i < strArr.length; i++){ // Перебираем слова из строки
+                if (i > 0){
+                    newString += ' ';   // Если слово не первое, то после будет добавлен пробел в строку-результат
+                }
+                for(let j = 0; j < strArr[i].length; j++){ // Проходим по символам в слове
+                    if(j % 2 == 0){    // Если символ четный, то возводим его в верхний регистр и вставляем в строку-результат
+                        newString += strArr[i][j].toUpperCase();   
+                    } else {   // Если символ нечетный, то возводим его в нижний регистр и вставляем в строку-результат
+                        newString += strArr[i][j].toLowerCase();
+                    }
+                }
+            }
+            return newString;
+        }
+
+        console.log(toWeirdCase( "String" ));//=> returns "StRiNg"
+        console.log(toWeirdCase( "Weird string case" ));//=> returns "WeIrD StRiNg CaSe"
+        console.log(toWeirdCase( "is" ));
+        console.log(toWeirdCase( "This" ));
+        console.log(toWeirdCase( 'ThIs Is A TeSt' ));
+    </script>
+
+</body>
+</html>
